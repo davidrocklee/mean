@@ -72,3 +72,11 @@ mongod
 *.ntvs*
 *.njsproj
 *.sln
+
+# tsd
+# ===
+tsd.json
+typings/
+
+.vscode/
+
