@@ -10,7 +10,8 @@ angular.module('users').config(['$stateProvider',
         url: '/settings',
         templateUrl: 'modules/users/client/views/settings/settings.client.view.html',
         data: {
-          roles: ['user', 'admin']
+// DL - adding supervisor and technician roles
+          roles: ['user', 'admin', 'technician', 'supervisor']
         }
       })
       .state('settings.profile', {

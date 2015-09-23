@@ -2,11 +2,13 @@
   <div class="page-header">
     <h1 ng-bind="article.title"></h1>
   </div>
-  <div class="pull-right" ng-show="authentication.user._id == article.user._id">
-    <a class="btn btn-primary" ui-sref="articles.edit({articleId: article._id})">
+  <!-- DL - all roles but user can edit services -->
+  <div class="pull-right" >
+    <a class="btn btn-primary" ui-sref="articles.edit({articleId: article._id})" ng-show="authentication.user.roles == 'admin' || authentication.user.roles == 'supervisor' || authentication.user.roles == 'technician'">
       <i class="glyphicon glyphicon-edit"></i>
     </a>
-    <a class="btn btn-primary" ng-click="remove();">
+  <!-- DL - supervisor and admin can delete services -->
+    <a class="btn btn-primary" ng-click="remove();" ng-show="authentication.user.roles == 'admin' || authentication.user.roles == 'supervisor'">
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>

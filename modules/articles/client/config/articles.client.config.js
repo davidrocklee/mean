@@ -21,7 +21,8 @@ angular.module('articles').run(['Menus',
     Menus.addSubMenuItem('topbar', 'articles', {
       title: 'Create Services',
       state: 'articles.create',
-      roles: ['user']
+// DL - create services is only available to all roles but user
+      roles: ['admin', 'supervisor', 'technician']
     });
   }
 ]);

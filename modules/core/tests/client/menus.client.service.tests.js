@@ -18,7 +18,8 @@
     });
 
     it('should have default roles to user and admin', function() {
-      expect(Menus.defaultRoles).toEqual(['user', 'admin']);
+// DL - adding supervisor and technician roles
+      expect(Menus.defaultRoles).toEqual(['user', 'admin', 'supervisor', 'technician']);
     });
 
     describe('addMenu', function() {

@@ -18,7 +18,8 @@ angular.module('articles').config(['$stateProvider',
         url: '/create',
         templateUrl: 'modules/articles/client/views/create-article.client.view.html',
         data: {
-          roles: ['user', 'admin']
+// DL - all roles but user can create services
+          roles: ['admin', 'supervisor', 'technician']
         }
       })
       .state('articles.view', {
@@ -29,7 +30,8 @@ angular.module('articles').config(['$stateProvider',
         url: '/:articleId/edit',
         templateUrl: 'modules/articles/client/views/edit-article.client.view.html',
         data: {
-          roles: ['user', 'admin']
+// DL - all roles but user can edit services
+          roles: ['admin', 'supervisor', 'technician']
         }
       });
   }

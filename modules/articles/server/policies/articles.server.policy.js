@@ -13,7 +13,8 @@ acl = new acl(new acl.memoryBackend());
  */
 exports.invokeRolesPolicies = function () {
   acl.allow([{
-    roles: ['admin'],
+// DL - admin and supervisor have all permissions
+    roles: ['admin','supervisor'],
     allows: [{
       resources: '/api/articles',
       permissions: '*'
@@ -22,16 +23,18 @@ exports.invokeRolesPolicies = function () {
       permissions: '*'
     }]
   }, {
-    roles: ['user'],
+// DL - technician can view and update
+    roles: ['technician'],
     allows: [{
       resources: '/api/articles',
       permissions: ['get', 'post']
     }, {
       resources: '/api/articles/:articleId',
-      permissions: ['get']
+      permissions: ['get', 'post']
     }]
   }, {
-    roles: ['guest'],
+// DL - user can only view
+    roles: ['user', 'guest'],
     allows: [{
       resources: '/api/articles',
       permissions: ['get']
