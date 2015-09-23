@@ -5,7 +5,7 @@
   <div class="list-group">
     <a ng-repeat="article in articles" ui-sref="articles.view({articleId: article._id})" class="list-group-item">
       <small class="list-group-item-text">
-        Posted on
+        Created on
         <span ng-bind="article.created | date:'mediumDate'"></span>
         by
         <span ng-bind="article.user.displayName"></span>
