@@ -8,13 +8,16 @@ angular.module('articles').run(['Menus',
       title: 'Services',
       state: 'articles',
       type: 'dropdown',
-      roles: ['*']
+// DL - services menu is only available after you log in
+      roles: ['user', 'admin', 'supervisor', 'technician']
     });
 
     // Add the dropdown list item
     Menus.addSubMenuItem('topbar', 'articles', {
       title: 'List Services',
-      state: 'articles.list'
+      state: 'articles.list',
+// DL - list services is only available after you log in
+      roles: ['user', 'admin', 'supervisor', 'technician']
     });
 
     // Add the dropdown create item
