@@ -2,7 +2,7 @@
 
 module.exports = {
   app: {
-    title: 'MEAN.JS',
+    title: 'CALCERT',
     description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
     keywords: 'mongodb, express, angularjs, node.js, mongoose, passport',
     googleAnalyticsTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'GOOGLE_ANALYTICS_TRACKING_ID'
@@ -12,7 +12,9 @@ module.exports = {
   // Session Cookie settings
   sessionCookie: {
     // session expiration is set by default to 24 hours
-    maxAge: 24 * (60 * 60 * 1000),
+    // maxAge: 24 * (60 * 60 * 1000),
+    // session expiration is set 20 minutes
+    maxAge: 20 * 60 * 1000,
     // httpOnly flag makes sure the cookie is only accessed
     // through the HTTP protocol and not JS/browser 
     httpOnly: true,
@@ -22,7 +24,7 @@ module.exports = {
     secure: false
   },
   // sessionSecret should be changed for security measures and concerns
-  sessionSecret: 'MEAN',
+  sessionSecret: 'CALCERT',
   // sessionKey is set to the generic sessionId key used by PHP applications
   // for obsecurity reasons
   sessionKey: 'sessionId',
