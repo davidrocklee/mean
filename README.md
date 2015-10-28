@@ -17,8 +17,9 @@ Before you begin we recommend you read about the basic building blocks that asse
 
 ## Prerequisites
 Make sure you have installed all of the following prerequisites on your development machine:
-* Node.js - [Download & Install Node.js](http://www.nodejs.org/download/) and the npm package manager. If you encounter any problems, you can also use this [GitHub Gist](https://gist.github.com/isaacs/579814) to install Node.js.
+* Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager. If you encounter any problems, you can also use this [GitHub Gist](https://gist.github.com/isaacs/579814) to install Node.js.
 * MongoDB - [Download & Install MongoDB](http://www.mongodb.org/downloads), and make sure it's running on the default port (27017).
+* Ruby - [Download & Install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
 * Bower - You're going to use the [Bower Package Manager](http://bower.io/) to manage your front-end packages. Make sure you've installed Node.js and npm first, then install bower globally using npm:
 
 ```bash
@@ -29,6 +30,12 @@ $ npm install -g bower
 
 ```bash
 $ npm install -g grunt-cli
+```
+
+* Sass - You're going to use [Sass](http://sass-lang.com/) to compile CSS during your grunt task. Make sure you have ruby installed, and then install Sass using gem install:
+
+```bash
+$ gem install sass
 ```
 
 ## Downloading MEAN.JS
@@ -180,6 +187,9 @@ In the docs we'll try to explain both general concepts of MEAN components and gi
 
 ## Live Example
 Browse the live MEAN.JS example on [http://meanjs.herokuapp.com](http://meanjs.herokuapp.com).
+
+## Contributing
+We welcome pull requests from the community! Just be sure to read the [contributing](https://github.com/meanjs/mean/blob/master/CONTRIBUTING.md) doc to get started.
 
 ## Deploying To Cloud Foundry
 
