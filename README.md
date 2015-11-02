@@ -18,6 +18,7 @@ Before you begin we recommend you read about the basic building blocks that asse
 ## Prerequisites
 Make sure you have installed all of the following prerequisites on your development machine:
 * Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager. If you encounter any problems, you can also use this [GitHub Gist](https://gist.github.com/isaacs/579814) to install Node.js.
+  * Node v5 IS NOT SUPPORTED AT THIS TIME! 
 * MongoDB - [Download & Install MongoDB](http://www.mongodb.org/downloads), and make sure it's running on the default port (27017).
 * Ruby - [Download & Install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
 * Bower - You're going to use the [Bower Package Manager](http://bower.io/) to manage your front-end packages. Make sure you've installed Node.js and npm first, then install bower globally using npm:
@@ -36,6 +37,16 @@ $ npm install -g grunt-cli
 
 ```bash
 $ gem install sass
+```
+
+```bash
+$ npm install -g grunt-cli
+```
+
+* Gulp - (Optional) You may use Gulp for Live Reload, Linting, and SASS or LESS.
+
+```bash
+$ npm install gulp -g
 ```
 
 ## Downloading MEAN.JS
@@ -152,6 +163,59 @@ And to run only the client tests, run the test:client task:
 $ grunt test:client
 ```
 
+## Running your application with Gulp
+
+After the install process, you can easily run your project with:
+
+```bash
+$ gulp
+```
+or
+
+```bash
+$ gulp default
+```
+
+The server is now running on http://localhost:3000 if you are using the default settings. 
+
+### Running Gulp Development Environment
+
+Start the development environment with:
+
+```bash
+$ gulp dev
+```
+
+### Running in Production mode
+To run your application with *production* environment configuration, execute gulp as follows:
+
+```bash
+$ gulp prod
+```
+
+### Testing Your Application with Gulp
+Using the full test suite included with MEAN.JS with the test task:
+
+### Run all tests
+```bash
+$ gulp test
+```
+
+### Run server tests
+```bash
+gulp test:server
+```
+
+### Run client tests
+```bash
+gulp test:client
+```
+
+### Run e2e tests
+```bash
+gulp test:e2e
+```
+
 ## Development and deployment With Docker
 
 * Install [Docker](https://docs.docker.com/installation/#installation)
@@ -184,9 +248,6 @@ In the docs we'll try to explain both general concepts of MEAN components and gi
 * Join #meanjs on freenode.
 * Discuss it in the new [Google Group](https://groups.google.com/d/forum/meanjs)
 * Ping us on [Twitter](http://twitter.com/meanjsorg) and [Facebook](http://facebook.com/meanjs)
-
-## Live Example
-Browse the live MEAN.JS example on [http://meanjs.herokuapp.com](http://meanjs.herokuapp.com).
 
 ## Contributing
 We welcome pull requests from the community! Just be sure to read the [contributing](https://github.com/meanjs/mean/blob/master/CONTRIBUTING.md) doc to get started.
