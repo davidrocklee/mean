@@ -8,8 +8,8 @@ angular.module('chat').config(['$stateProvider',
         url: '/chat',
         templateUrl: 'modules/chat/client/views/chat.client.view.html',
         data: {
-// DL -- removed all roles so Chat is not available
-          roles: []
+// DL -- add all roles so Chat menu appears if logged in
+          roles: ['admin','supervior','technician','user']
         }
       });
   }

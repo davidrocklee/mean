@@ -7,8 +7,8 @@ angular.module('chat').run(['Menus',
     Menus.addMenuItem('topbar', {
       title: 'Chat',
       state: 'chat',
-// DL -- removed all roles so Chat menu does not appear at all
-      roles: []
+// DL -- add all roles so Chat menu appears if logged in
+      roles: ['admin','supervior','technician','user']
     });
   }
 ]);
